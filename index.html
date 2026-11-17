@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/images/logo.png" sizes="48x48" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Центр помощи кормящим мамам «Радость материнства» — ГВ на дому в Москве</title>
+  <meta name="description" content="Бесплатная горячая линия по грудному вскармливанию. Расцеживаем застой молока и мастит, налаживаем лактацию, учим правильному прикладыванию. Выезд на дом круглосуточно по Москве и МО." />
+  <meta name="keywords" content="застой молока, расцеживание, грудное вскармливание, выезд на дом, Москва, расцедить грудь, мастит" />
+  <meta property="og:title" content="Центр помощи кормящим мамам «Радость материнства»" />
+  <meta property="og:description" content="Расцеживаем застой молока без боли. Налаживаем кормление грудью при отказе ребёнка или недостатке молока. Круглосуточно, выезд на дом." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zastoy-moloka.ru/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Радость материнства" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://zastoy-moloka.ru/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalBusiness",
+   "name":"Центр помощи кормящим мамам «Радость материнства»",
+   "url":"https://zastoy-moloka.ru",
+   "telephone":"+74957760396",
+   "address":[
+     {"@type":"PostalAddress","streetAddress":"Хорошевское шоссе, 12к1","addressLocality":"Москва","addressCountry":"RU"},
+     {"@type":"PostalAddress","streetAddress":"Дружбы ул., 6","addressLocality":"Одинцово","addressCountry":"RU"}
+   ],
+   "openingHours":"Mo-Su 00:00-23:59",
+   "priceRange":"8500-14500 RUB"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,500,600,700|nunito:400,500,600,700,800&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      /* Тёплая терракотово-золотая палитра — «радость», отличная от мятной kormybaby.ru */
+      --a1:#D97757;      /* основной акцент — тёплая терракота */
+      --a2:#E2916F;      /* светлее для hover */
+      --a3:#EDB49C;      /* светлый акцент */
+      --a4:#F8DDD0;      /* очень светлый — фон бейджей */
+      --a5:#FCEEE7;      /* почти белый с терракотовым */
+      --a6:#FDF6F2;      /* фоны секций */
+      --cta:#D9A033;--cta-d:#B8801A;--cta-l:#FBF1DF;  /* тёплое золото — CTA */
+      --white:#FFFFFF;
+      --cream:#FFFBF7;
+      --ink:#2B211C;
+      --ink2:#4A362C;
+      --muted:#8A7267;
+      --brd:#F0E4DC;
+      --brd2:#E0CBBE;
+      --terra:var(--a1);--terra-mid:var(--a2);--terra-light:var(--a4);--terra-pale:var(--a5);--terra-dark:var(--ink2);
+      --gold:var(--cta);--gold-dark:var(--cta-d);--gold-lt:var(--cta-l);
+      --off:var(--a6);--border:var(--brd);--border-mid:var(--brd2);
+      --r:16px;--rl:24px;--rsm:10px;
+      --shadow:0 4px 20px rgba(217,119,87,0.10);--shadow-lg:0 12px 44px rgba(217,119,87,0.16);
+    }
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+    h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
+    img{max-width:100%}
+    a{color:inherit}
+
+    /* HEADER */
+    .site-header{position:sticky;top:0;z-index:500;background:rgba(255,251,247,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .hd-in{max-width:1280px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--terra-dark);text-decoration:none}
+    .hd-nav{display:flex;gap:28px;font-size:14px;font-weight:700}
+    .hd-nav a{text-decoration:none;color:var(--ink2)}
+    .hd-nav a:hover{color:var(--terra)}
+    .hd-right{display:flex;align-items:center;gap:18px}
+    .hd-phone{font-weight:800;font-size:15px;text-decoration:none;color:var(--ink)}
+    .hd-cta{background:var(--cta);color:#fff;border:none;border-radius:var(--rsm);padding:11px 22px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none;transition:background .2s}
+    .hd-cta:hover{background:var(--cta-d)}
+    @media(max-width:900px){.hd-nav{display:none}.hd-phone{display:none}}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--a6) 0%,var(--white) 60%);padding:72px 40px 60px;border-bottom:1px solid var(--border)}
+    .hero-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--a4);color:var(--terra-dark);font-size:13px;font-weight:800;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+    .hero h1{font-size:clamp(28px,4vw,42px);line-height:1.2;color:var(--ink);margin-bottom:18px;text-wrap:balance}
+    .hero-desc{font-size:17px;color:var(--muted);margin-bottom:28px;max-width:520px}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+    .btn-gold{background:var(--cta);color:#fff;border:none;border-radius:var(--rsm);padding:15px 30px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .2s}
+    .btn-gold:hover{background:var(--cta-d);transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:2px solid var(--terra);color:var(--terra-dark);border-radius:var(--rsm);padding:13px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+    .hero-trust{display:flex;gap:24px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink2)}
+    .trust-ic{width:28px;height:28px;border-radius:50%;background:var(--a4);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+    .hero-card{background:var(--white);border-radius:var(--rl);padding:32px;box-shadow:var(--shadow-lg);border:1.5px solid var(--border)}
+    .hero-card h3{font-size:18px;color:var(--terra-dark);margin-bottom:14px}
+    .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+    .stat{text-align:center;padding:14px 8px;background:var(--a6);border-radius:var(--r)}
+    .stat-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--terra)}
+    .stat-lbl{font-size:11px;color:var(--muted);font-weight:700;margin-top:4px}
+    .phones-block{display:flex;flex-direction:column;gap:8px}
+    .phones-block a{font-size:18px;font-weight:800;color:var(--ink);text-decoration:none;text-align:center;padding:10px;background:var(--a6);border-radius:var(--rsm)}
+    @media(max-width:900px){.hero-in{grid-template-columns:1fr}}
+
+    /* SECTION base */
+    .sec{padding:64px 40px}
+    .sec-in{max-width:1280px;margin:0 auto}
+    .sec-eyebrow{text-align:center;font-size:13px;font-weight:800;color:var(--terra);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+    .sec h2{font-size:clamp(24px,3vw,32px);text-align:center;margin-bottom:14px;text-wrap:balance}
+    .sec-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 44px;font-size:15px}
+
+    /* SERVICES */
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+    .svc-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:26px;transition:transform .2s,box-shadow .2s}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .svc-ic{width:52px;height:52px;border-radius:50%;background:var(--a5);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+    .svc-card h3{font-size:17px;margin-bottom:8px;font-family:'Nunito',sans-serif;font-weight:800}
+    .svc-card p{font-size:14px;color:var(--muted)}
+
+    /* SPECIALISTS */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .team-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:24px;text-align:center}
+    .team-ava{width:84px;height:84px;border-radius:50%;background:var(--a4);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--terra-dark);overflow:hidden}
+    .team-ava img{width:100%;height:100%;object-fit:cover}
+    .team-name{font-weight:800;font-size:16px;margin-bottom:4px}
+    .team-role{font-size:12px;color:var(--terra);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}
+    .team-exp{font-size:13px;color:var(--muted);line-height:1.6}
+
+    /* PRICING */
+    .price-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:var(--rl);padding:36px;max-width:640px;margin:0 auto}
+    .price-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--border)}
+    .price-row:last-child{border-bottom:none}
+    .price-name{font-weight:700;font-size:15px}
+    .price-sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .price-amount{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--terra-dark)}
+
+    /* TESTIMONIALS */
+    .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+    .test-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:26px}
+    .test-text{font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:14px}
+    .test-name{font-weight:800;font-size:14px;color:var(--terra-dark)}
+
+    /* CTA band */
+    .cta-band{background:linear-gradient(135deg,var(--terra) 0%,var(--a2) 100%);padding:56px 40px;text-align:center;color:#fff}
+    .cta-band h2{color:#fff;margin-bottom:12px}
+    .cta-band p{opacity:.92;margin-bottom:26px;max-width:520px;margin-left:auto;margin-right:auto}
+    .btn-white{background:#fff;color:var(--terra-dark);border:none;border-radius:var(--rsm);padding:15px 32px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+
+    /* FOOTER */
+    .site-footer{background:var(--ink);color:rgba(255,255,255,0.8);padding:48px 40px 24px}
+    .ft-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+    .ft-logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
+    .ft-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
+    .ft-col h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+    .ft-col div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
+    .ft-col a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .ft-bottom{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4)}
+
+    @media(max-width:900px){.hd-in,.hero,.sec,.cta-band{padding-left:20px;padding-right:20px}.ft-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="hd-in">
+    <a href="/" class="logo">Радость материнства</a>
+    <nav class="hd-nav">
+      <a href="#services">Услуги</a>
+      <a href="#team">Специалисты</a>
+      <a href="#prices">Цены</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="hd-right">
+      <a href="tel:+74957760396" class="hd-phone">+7 (495) 776-03-96</a>
+      <a href="tel:+74957760396" class="hd-cta">Позвонить</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <span class="hero-eyebrow">🌿 Центр грудного вскармливания</span>
+      <h1>Кормите грудью без боли и проблем — мы вам в этом поможем</h1>
+      <p class="hero-desc">Единственный центр поддержки грудного вскармливания с медицинской лицензией «ГВ». Расцеживаем застой молока бережно и эффективно, обучаем прикладыванию, налаживаем лактацию в любом возрасте ребёнка.</p>
+      <div class="hero-ctas">
+        <a href="tel:+74957760396" class="btn-gold">📞 Бесплатно проконсультироваться</a>
+        <a href="#services" class="btn-outline">Какие проблемы решаем</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-ic">🩺</span>Медицинское образование у всех специалистов</div>
+        <div class="trust-item"><span class="trust-ic">🚗</span>Выезд круглосуточно по Москве и МО</div>
+        <div class="trust-item"><span class="trust-ic">📜</span>Медицинская лицензия ГВ</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Горячая линия — бесплатно 24/7</h3>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">26</div><div class="stat-lbl">лет опыта старших специалистов</div></div>
+        <div class="stat"><div class="stat-num">24/7</div><div class="stat-lbl">выезд по Москве и МО</div></div>
+      </div>
+      <div class="phones-block">
+        <a href="tel:+74957760396">📞 +7 (495) 776-03-96</a>
+        <a href="https://wa.me/79120130405">💬 WhatsApp: +7 (912) 013-04-05</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="sec-in">
+    <div class="sec-eyebrow">Мы можем вам помочь</div>
+    <h2>Проблемы, которые мы решаем на дому</h2>
+    <p class="sec-sub">При температуре и боли в груди — приезжаем в день обращения.</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-ic">🤲</div>
+        <h3>Застой молока (лактостаз)</h3>
+        <p>Расцеживаем грудь, оставляем рекомендации, при необходимости — физиопроцедуры (ультрафонофорез или магнитный аппарат). Учим сцеживанию, чтобы застой не повторялся.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🌡️</div>
+        <h3>Лактационный мастит</h3>
+        <p>Выезд маммолога или специалиста по ГВ с УЗИ на дом. Назначаем лечение, расцеживаем, помогаем найти причину, чтобы мастит не повторялся.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🤱</div>
+        <h3>Обучение прикладыванию</h3>
+        <p>Учим прикладывать малыша без боли и трещин — даже если он отказывается и не берёт грудь.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">📈</div>
+        <h3>Недостаток молока</h3>
+        <p>Находим причину нехватки молока и увеличиваем лактацию в любом возрасте ребёнка — до нужного объёма.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🍼</div>
+        <h3>Послеродовые закупорки протоков</h3>
+        <p>Расцеживание в первые 2 недели после родов при нагрубании молочных желёз. Обучение прикладыванию при большом объёме молока.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🌙</div>
+        <h3>Обучение сну</h3>
+        <p>Формируем полезные навыки сна мягко и легко — без вреда маме и ребёнку.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🥣</div>
+        <h3>Введение прикорма</h3>
+        <p>Помогаем грамотно ввести прикорм, налаживаем пищевое поведение малышей, которые не хотят есть «взрослую еду».</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">💻</div>
+        <h3>Онлайн-консультация</h3>
+        <p>Решаем любые проблемы с грудным вскармливанием онлайн — консультация маммолога, педиатра-неонатолога.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🎗️</div>
+        <h3>Завершение лактации</h3>
+        <p>Помогаем закончить кормление грудью максимально спокойно для мамы и малыша.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" id="team">
+  <div class="sec-in">
+    <div class="sec-eyebrow">Самые внимательные консультанты</div>
+    <h2>Специалисты, которые сделают вашу жизнь легче</h2>
+    <p class="sec-sub">Все сотрудники с медицинским образованием, проходят осмотр перед каждой сменой, работают в медицинских халатах и перчатках.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-ava">МГ</div>
+        <div class="team-name">Мария Гусева</div>
+        <div class="team-role">Основатель центра</div>
+        <div class="team-exp">Старший специалист по ГВ широкого профиля. Стаж 16 лет. Первый МГМУ им. Сеченова, доп. курсы по массажу и консультированию.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-ava">ВК</div>
+        <div class="team-name">Ксения Власова</div>
+        <div class="team-role">Специалист по ГВ</div>
+        <div class="team-exp">Стаж 23 года, более 10 лет — консультант по ГВ. Расцеживание лактостазов и маститов, трещины сосков, недостаток молока.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-ava">ВП</div>
+        <div class="team-name">Виктория Пономарева</div>
+        <div class="team-role">Педиатр, специалист по ГВ</div>
+        <div class="team-exp">Отказ от груди, коррекция прикладывания и поз, болезненное кормление, недостаток прибавки веса.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-ava">АК</div>
+        <div class="team-name">Алина Комкова</div>
+        <div class="team-role">Педиатр, специалист по ГВ</div>
+        <div class="team-exp">Ярославский ГМУ. Опыт в медицине более 8 лет, включая скорую помощь. Расцеживание лактостазов, прикладывание.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-ava">АЯ</div>
+        <div class="team-name">Анна Якушина</div>
+        <div class="team-role">Акушерка, доула</div>
+        <div class="team-exp">Преподаватель курсов для беременных. Непрерывное профильное обучение с 1999 года.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-ava">ЕЕ</div>
+        <div class="team-name">Елена Ершова</div>
+        <div class="team-role">Акушерка, специалист по ГВ</div>
+        <div class="team-exp">Стаж 26 лет. Расцеживание застоя молока, лактостаза, мастита. Личный опыт ГВ — 4 года, 2 детей.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="prices">
+  <div class="sec-in">
+    <div class="sec-eyebrow">Прозрачно и честно</div>
+    <h2>Сколько стоит выезд на дом</h2>
+    <p class="sec-sub">Точную сумму называем сразу при звонке. Выезд за МКАД — доплата по километражу.</p>
+    <div class="price-wrap">
+      <div class="price-row">
+        <div><div class="price-name">Дневной выезд</div><div class="price-sub">9:00 – 18:00</div></div>
+        <div class="price-amount">8 500 ₽</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-name">Вечерний выезд</div><div class="price-sub">18:00 – 21:00</div></div>
+        <div class="price-amount">11 500 ₽</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-name">Ночной выезд</div><div class="price-sub">21:00 – 9:00</div></div>
+        <div class="price-amount">14 500 ₽</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-name">Онлайн-консультация</div><div class="price-sub">По видеосвязи</div></div>
+        <div class="price-amount">от 3 500 ₽</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--white);border-top:1px solid var(--border)">
+  <div class="sec-in">
+    <div class="sec-eyebrow">10 лет отзывов</div>
+    <h2>Что говорят мамы</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-text">«Болела грудь, было покраснение. Позвонила в центр, примерно через пару часов ко мне приехали. Расцедили, сначала было неприятно, но потом вообще не больно. На следующее утро у меня была мягкая грудь.»</div>
+        <div class="test-name">Мария Кашина</div>
+      </div>
+      <div class="test-card">
+        <div class="test-text">«Под вечер поднялась температура 38,5. Ко мне отправили специалиста почти ночью. Приехала Оксана, очень аккуратно и почти без боли расцедила грудь, температура сразу упала.»</div>
+        <div class="test-name">Виктория</div>
+      </div>
+      <div class="test-card">
+        <div class="test-text">«Сильная боль в груди, температура 39,5. Приехали прямо домой через 2 часа после звонка. Очень деликатно расцедили. Облегчение пришло сразу же. Они меня просто спасли!»</div>
+        <div class="test-name">Евгения Андреева</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contacts">
+  <h2>Застой молока не ждёт удобного времени — мы тоже</h2>
+  <p>Оставьте заявку или позвоните — наши специалисты свяжутся с вами в течение 5 минут. Выезжаем круглосуточно по Москве и Московской области.</p>
+  <a href="tel:+74957760396" class="btn-white">📞 +7 (495) 776-03-96</a>
+</section>
+
+<footer class="site-footer">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">Радость материнства</div>
+      <p class="ft-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
+    </div>
+    <div class="ft-col">
+      <h5>Контакты</h5>
+      <div><a href="tel:+74957760396">+7 (495) 776-03-96</a></div>
+      <div><a href="https://wa.me/79120130405">WhatsApp: +7 (912) 013-04-05</a></div>
+      <div><a href="mailto:info@zastoy-moloka.ru">info@zastoy-moloka.ru</a></div>
+      <div>Москва, Хорошевское шоссе, 12к1</div>
+      <div>Одинцово, Дружбы ул., 6</div>
+    </div>
+    <div class="ft-col">
+      <h5>Статьи</h5>
+      <div><a href="/symptomy_lechenie">Застой молока — симптомы и лечение</a></div>
+      <div><a href="/pitanie_kormyashey_mamy">Питание кормящей мамы</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    ООО «Мобильная медицинская диагностика» · ОГРН 1165032060137 · ИНН 5032257671<br/>
+    <!-- TODO: номер лицензии не подтверждён — на старом сайте ЛО-50-01-009051 от 03.10.2017, на rascedit.ru другая цифра (00951). Уточнить перед публикацией. -->
+    Лицензия на осуществление медицинской деятельности: уточняется
+  </div>
+</footer>
+
+</body>
+</html>

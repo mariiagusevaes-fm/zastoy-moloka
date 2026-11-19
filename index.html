@@ -111,7 +111,8 @@
     .sec-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 44px;font-size:15px}
 
     /* SERVICES */
-    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
     .svc-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:26px;transition:transform .2s,box-shadow .2s}
     .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .svc-ic{width:52px;height:52px;border-radius:50%;background:var(--a5);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
@@ -119,7 +120,8 @@
     .svc-card p{font-size:14px;color:var(--muted)}
 
     /* SPECIALISTS */
-    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media(max-width:860px){.team-grid{grid-template-columns:1fr}}
     .team-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:24px;text-align:center}
     .team-ava{width:84px;height:84px;border-radius:50%;background:var(--a4);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--terra-dark);overflow:hidden}
     .team-ava img{width:100%;height:100%;object-fit:cover}
@@ -276,6 +278,21 @@
         <div class="svc-ic">🎗️</div>
         <h3>Завершение лактации</h3>
         <p>Помогаем закончить кормление грудью максимально спокойно для мамы и малыша.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">💧</div>
+        <h3>Трещины и боль при кормлении</h3>
+        <p>Убираем боль при прикладывании, подбираем уход и технику, чтобы трещины зажили быстро — без перерыва в кормлении.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">💦</div>
+        <h3>Избыток молока (гиперлактация)</h3>
+        <p>Настраиваем режим кормления и сцеживания при избытке молока — снимаем давление и подтекание, снижаем риск новых застоев.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic">🚫</div>
+        <h3>Отказ от груди</h3>
+        <p>Разбираемся, почему малыш отказывается от груди, и бережно возвращаем грудное вскармливание — без давления на ребёнка.</p>
       </div>
     </div>
   </div>

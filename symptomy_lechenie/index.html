@@ -67,7 +67,15 @@
     .cta-block{background:linear-gradient(135deg,var(--terra) 0%,var(--a2) 100%);border-radius:var(--rl);padding:32px;text-align:center;color:#fff;margin:40px 0}
     .cta-block h3{color:#fff;margin-bottom:10px}
     .btn-white{background:#fff;color:var(--ink2);border:none;border-radius:var(--rsm);padding:14px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}
-    .site-footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:36px 24px;font-size:13px;text-align:center}
+    .site-footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 24px 24px}
+    .ft-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;text-align:left}
+    .ft-logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
+    .ft-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
+    .ft-col h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+    .ft-col div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
+    .ft-col a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .ft-bottom{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);text-align:center}
+    @media(max-width:900px){.ft-grid{grid-template-columns:1fr}}
     .site-footer a{color:rgba(255,255,255,0.85)}
   </style>
 <script type="text/javascript">
@@ -158,7 +166,26 @@
 </div>
 
 <footer class="site-footer">
-  <a href="/">Радость материнства</a> · Центр помощи кормящим мамам · Москва и МО, круглосуточно
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">Радость материнства</div>
+      <p class="ft-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
+    </div>
+    <div class="ft-col">
+      <h5>Контакты</h5>
+      <div><a href="tel:+74957760396">+7 (495) 776-03-96</a></div>
+      <div><a href="https://wa.me/79120130405">WhatsApp: +7 (912) 013-04-05</a></div>
+      <div><a href="mailto:info@zastoy-moloka.ru">info@zastoy-moloka.ru</a></div>
+      <div>Одинцово, ул. Дружбы, дом 2</div>
+    </div>
+    <div class="ft-col">
+      <h5>Статьи</h5>
+      <div><a href="/pitanie_kormyashey_mamy">Питание кормящей мамы</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    Реквизиты и номер медицинской лицензии предоставим по запросу
+  </div>
 </footer>
 
 </body>

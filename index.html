@@ -33,7 +33,7 @@
   </script>
 
   <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=playfair-display:400,500,600,700|nunito:400,500,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,500,600,700|mulish:400,500,600,700,800&display=swap" rel="stylesheet">
 
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -56,24 +56,24 @@
       --terra:var(--a1);--terra-mid:var(--a2);--terra-light:var(--a4);--terra-pale:var(--a5);--terra-dark:var(--ink2);
       --gold:var(--cta);--gold-dark:var(--cta-d);--gold-lt:var(--cta-l);
       --off:var(--a6);--border:var(--brd);--border-mid:var(--brd2);
-      --r:16px;--rl:24px;--rsm:10px;
+      --r:22px;--rl:34px;--rsm:14px;
       --shadow:0 4px 20px rgba(217,119,87,0.10);--shadow-lg:0 12px 44px rgba(217,119,87,0.16);
     }
     html{scroll-behavior:smooth;overflow-x:hidden}
-    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+    body{font-family:'Mulish',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
     h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
     img{max-width:100%}
     a{color:inherit}
 
     /* HEADER */
-    .site-header{position:sticky;top:0;z-index:500;background:rgba(255,251,247,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .site-header{position:sticky;top:0;z-index:500;background:#A84A30;border-bottom:1px solid rgba(0,0,0,0.08)}
     .hd-in{max-width:1280px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--terra-dark);text-decoration:none}
+    .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;text-decoration:none}
     .hd-nav{display:flex;gap:28px;font-size:14px;font-weight:700}
-    .hd-nav a{text-decoration:none;color:var(--ink2)}
-    .hd-nav a:hover{color:var(--terra)}
+    .hd-nav a{text-decoration:none;color:rgba(255,255,255,0.85)}
+    .hd-nav a:hover{color:#fff}
     .hd-right{display:flex;align-items:center;gap:18px}
-    .hd-phone{font-weight:800;font-size:15px;text-decoration:none;color:var(--ink)}
+    .hd-phone{font-weight:800;font-size:15px;text-decoration:none;color:#fff}
     .hd-cta{background:var(--cta);color:#fff;border:none;border-radius:var(--rsm);padding:11px 22px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none;transition:background .2s}
     .hd-cta:hover{background:var(--cta-d)}
     @media(max-width:900px){.hd-nav{display:none}.hd-phone{display:none}}
@@ -115,7 +115,7 @@
     .svc-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:26px;transition:transform .2s,box-shadow .2s}
     .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .svc-ic{width:52px;height:52px;border-radius:50%;background:var(--a5);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
-    .svc-card h3{font-size:17px;margin-bottom:8px;font-family:'Nunito',sans-serif;font-weight:800}
+    .svc-card h3{font-size:17px;margin-bottom:8px;font-family:'Mulish',sans-serif;font-weight:800}
     .svc-card p{font-size:14px;color:var(--muted)}
 
     /* SPECIALISTS */

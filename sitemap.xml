@@ -2,17 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zastoy-moloka.ru/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://zastoy-moloka.ru/symptomy_lechenie</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://zastoy-moloka.ru/mastit</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://zastoy-moloka.ru/konsultaciya_po_gv</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://zastoy-moloka.ru/dokorm_smesyu</loc>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://zastoy-moloka.ru/pitanie_kormyashey_mamy</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

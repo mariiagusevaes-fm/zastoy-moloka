@@ -33,58 +33,73 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --a1:#D97757;--a2:#E2916F;--a3:#EDB49C;--a4:#F8DDD0;--a5:#FCEEE7;--a6:#FDF6F2;
-      --cta:#D9A033;--cta-d:#B8801A;--cta-l:#FBF1DF;
-      --white:#FFFFFF;--cream:#FFFBF7;--ink:#2B211C;--ink2:#4A362C;--muted:#8A7267;
-      --brd:#F0E4DC;--brd2:#E0CBBE;--r:22px;--rl:34px;--rsm:14px;
-      --terra:var(--a1);--terra-dark:var(--ink2);
+      --clay:#D97757;--clay-light:#E2916F;--clay-pale:#EDB49C;--clay-mist:#F8DDD0;--clay-fog:#FCEEE7;--clay-haze:#FDF6F2;
+      --honey:#D9A033;--honey-deep:#B8801A;--honey-pale:#FBF1DF;
+      --paper-white:#FFFFFF;--paper:#FFFBF7;--char:#2B211C;--char-soft:#4A362C;--smoke:#8A7267;
+      --hairline:#F0E4DC;--hairline-deep:#E0CBBE;
+      --radius-sm:14px;--radius-md:22px;--radius-lg:34px;
       --ok:#3F7D52;--ok-bg:#EAF4ED;--bad:#B8402F;--bad-bg:#FDECEA;
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Mulish',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+    body{font-family:'Mulish',sans-serif;background:var(--paper);color:var(--char);line-height:1.75;font-size:16px}
     h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
     a{color:inherit}
-    .site-header{position:sticky;top:0;z-index:500;background:#A84A30;border-bottom:1px solid rgba(0,0,0,0.08)}
-    .hd-in{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;text-decoration:none}
-    .hd-cta{background:var(--cta);color:#fff;border:none;border-radius:var(--rsm);padding:10px 20px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none}
+    .inline-link{color:var(--clay);font-weight:700}
 
-    .article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-    .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:18px}
-    .breadcrumb a{color:var(--terra);text-decoration:none}
+    .topline{position:sticky;top:0;z-index:500;background:#A84A30;border-bottom:1px solid rgba(0,0,0,0.08)}
+    .topline-row{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brandmark{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;text-decoration:none}
+    .topline-call{background:var(--honey);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px 20px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none}
+
+    .read-in{max-width:720px;margin:0 auto;padding:48px 24px 64px}
+    .trail{font-size:13px;color:var(--smoke);margin-bottom:18px}
+    .trail a{color:var(--clay);text-decoration:none}
     h1{font-size:clamp(26px,4vw,36px);line-height:1.25;margin-bottom:16px;text-wrap:balance}
-    .lead{font-size:17px;color:var(--muted);margin-bottom:32px}
-    .art-sec{margin-bottom:36px}
-    .art-sec h2{font-size:22px;color:var(--ink2);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--a4)}
-    .art-sec h3{font-size:16px;color:var(--terra);margin:18px 0 8px}
-    .art-sec p{margin-bottom:12px}
-    .art-sec ul{padding-left:22px;margin-bottom:12px}
-    .art-sec li{margin-bottom:8px}
-    .good-bad{display:grid;grid-template-columns:1fr;gap:16px;margin:16px 0}
-    @media(min-width:640px){.good-bad{grid-template-columns:1fr 1fr}}
-    .gb-card{border-radius:var(--r);padding:20px}
-    .gb-bad{background:var(--bad-bg)}
-    .gb-ok{background:var(--ok-bg)}
-    .gb-card h3{margin-top:0;font-size:15px}
-    .gb-bad h3{color:var(--bad)}
-    .gb-ok h3{color:var(--ok)}
-    .gb-card ul{padding-left:18px;font-size:14px}
-    .faq-item{border-bottom:1px solid var(--brd);padding:16px 0}
-    .faq-q{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--ink2)}
-    .faq-a{font-size:14.5px;color:var(--muted)}
-    .cta-block{background:linear-gradient(135deg,var(--terra) 0%,var(--a2) 100%);border-radius:var(--rl);padding:32px;text-align:center;color:#fff;margin:40px 0}
-    .cta-block h3{color:#fff;margin-bottom:10px}
-    .btn-white{background:#fff;color:var(--ink2);border:none;border-radius:var(--rsm);padding:14px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}
-    .site-footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 24px 24px}
-    .ft-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;text-align:left}
-    .ft-logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
-    .ft-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
-    .ft-col h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
-    .ft-col div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
-    .ft-col a{color:rgba(255,255,255,0.8);text-decoration:none}
-    .ft-bottom{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);text-align:center}
-    @media(max-width:900px){.ft-grid{grid-template-columns:1fr}}
-    .site-footer a{color:rgba(255,255,255,0.85)}
+    .dek{font-size:17px;color:var(--smoke);margin-bottom:32px}
+
+    .chapter{margin-bottom:38px}
+    .chapter-head{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--clay-mist);margin-bottom:16px}
+    .chapter-num{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--clay-pale);flex-shrink:0}
+    .chapter-head h2{font-size:22px;color:var(--char-soft);margin:0}
+    .chapter h3{font-size:16px;color:var(--clay);margin:18px 0 8px}
+    .chapter p{margin-bottom:12px}
+    .chapter ul{padding-left:22px;margin-bottom:12px}
+    .chapter li{margin-bottom:8px}
+
+    .compare{display:grid;grid-template-columns:1fr;gap:16px;margin:16px 0}
+    @media(min-width:640px){.compare{grid-template-columns:1fr 1fr}}
+    .compare-col{border-radius:var(--radius-md);padding:20px}
+    .compare-col--avoid{background:var(--bad-bg)}
+    .compare-col--allow{background:var(--ok-bg)}
+    .compare-col h3{margin-top:0;font-size:15px}
+    .compare-col--avoid h3{color:var(--bad)}
+    .compare-col--allow h3{color:var(--ok)}
+    .compare-col ul{padding-left:18px;font-size:14px}
+
+    .note{background:var(--clay-haze);border-radius:var(--radius-md);padding:18px 20px;margin:16px 0;font-size:14.5px;display:flex;gap:12px;align-items:flex-start}
+    .note::before{content:'💡';flex-shrink:0;font-size:16px}
+
+    .ask{margin-bottom:38px}
+    .ask-grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:680px){.ask-grid{grid-template-columns:1fr 1fr}}
+    .ask-card{background:var(--paper-white);border:1.5px solid var(--hairline);border-radius:var(--radius-md);padding:18px 20px}
+    .ask-q{font-weight:800;font-size:14.5px;margin-bottom:6px;color:var(--char-soft)}
+    .ask-a{font-size:13.5px;color:var(--smoke);line-height:1.6}
+
+    .nudge{background:linear-gradient(135deg,var(--clay) 0%,var(--clay-light) 100%);border-radius:var(--radius-lg);padding:32px;text-align:center;color:#fff;margin:40px 0}
+    .nudge h3{color:#fff;margin-bottom:10px}
+    .btn-paper{background:#fff;color:var(--char-soft);border:none;border-radius:var(--radius-sm);padding:14px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}
+
+    .foot{background:var(--char);color:rgba(255,255,255,0.7);padding:48px 24px 24px}
+    .foot-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;text-align:left}
+    .foot-brand{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
+    .foot-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
+    .foot-group h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+    .foot-group div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
+    .foot-group a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);text-align:center}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr}}
+    .foot a{color:rgba(255,255,255,0.85)}
   </style>
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -104,22 +119,22 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="hd-in">
-    <a href="/" class="logo">Радость материнства</a>
-    <a href="tel:+74957760396" class="hd-cta">📞 +7 (495) 776-03-96</a>
+<header class="topline">
+  <div class="topline-row">
+    <a href="/" class="brandmark">Радость материнства</a>
+    <a href="tel:+74957760396" class="topline-call">📞 +7 (495) 776-03-96</a>
   </div>
 </header>
 
-<div class="article-wrap">
-  <nav class="breadcrumb"><a href="/">Главная</a> → Питание кормящей мамы</nav>
+<div class="read-in">
+  <nav class="trail"><a href="/">Главная</a> → Питание кормящей мамы</nav>
   <h1>Питание кормящей мамы — нужна ли строгая диета?</h1>
-  <p class="lead">Грамотно сбалансированное питание способствует длительной и качественной лактации. Жёсткие ограничения нужны строго по показаниям гастроэнтеролога — если таких показаний нет, сильно ограничивать себя нежелательно.</p>
+  <p class="dek">Грамотно сбалансированное питание способствует длительной и качественной лактации. Жёсткие ограничения нужны строго по показаниям гастроэнтеролога — если таких показаний нет, сильно ограничивать себя нежелательно.</p>
 
-  <div class="art-sec">
-    <h2>Что можно и что нельзя</h2>
-    <div class="good-bad">
-      <div class="gb-card gb-bad">
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">01</span><h2>Что можно и что нельзя</h2></div>
+    <div class="compare">
+      <div class="compare-col compare-col--avoid">
         <h3>⚠️ Категорически нежелательно</h3>
         <ul>
           <li>«Магазинные» соусы (кетчуп, майонез)</li>
@@ -133,7 +148,7 @@
           <li>С осторожностью: капуста, бобовые, виноград, чёрный хлеб (газообразование)</li>
         </ul>
       </div>
-      <div class="gb-card gb-ok">
+      <div class="compare-col compare-col--allow">
         <h3>✅ Список разрешённых продуктов</h3>
         <ul>
           <li>Каши на воде или 50/50 с молоком</li>
@@ -146,10 +161,10 @@
       </div>
     </div>
     <p>Важно не количество ограничений, а постепенность: после однократного введения нового продукта наблюдайте за реакцией малыша 3 дня, затем введите повторно и наблюдайте ещё день. Газообразование, колики или сыпь говорят о том, что продукт пока не подходит — попробуйте снова через месяц.</p>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Рекомендации ВОЗ по рациону</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">02</span><h2>Рекомендации ВОЗ по рациону</h2></div>
     <ul>
       <li>Свежее или свежемороженое красное мясо — минимум 2 раза в неделю</li>
       <li>Свежая рыба — дважды в неделю</li>
@@ -161,65 +176,67 @@
       <li>Углеводы (хлеб, макароны, картофель) — не более половины дневного рациона</li>
     </ul>
     <p>Общая энергетическая потребность — около 2300–2700 ккал в сутки, с балансом белков, жиров, углеводов, витаминов и минералов.</p>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Что и сколько пить</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">03</span><h2>Что и сколько пить</h2></div>
     <p>Пить следует чуть больше, чем хочется — в среднем 2–3 литра в сутки. Можно: простую воду без газа, некрепкий чай, компот из сухофруктов, настой шиповника.</p>
     <p>Нежелательно пить больше 1 чашки кофе или крепкого чая в день, травяные настои (включая мяту, мелиссу) и соки. Специальные лактационные чаи для профилактики пить не рекомендуется.</p>
-    <div style="background:var(--a6);border-left:4px solid var(--terra);border-radius:0 var(--r) var(--r) 0;padding:16px 20px;font-size:14.5px">На 2–6 день после родов, когда приходит молоко, не стоит пить в больших объёмах «чтобы молоко пришло быстрее» — это может спровоцировать слишком агрессивный приход молока с отёком тканей и сильной болью, а в дальнейшем и <a href="/symptomy_lechenie" style="color:var(--terra);font-weight:700">застой молока</a> из-за избыточной выработки.</div>
-  </div>
+    <div class="note">На 2–6 день после родов, когда приходит молоко, не стоит пить в больших объёмах «чтобы молоко пришло быстрее» — это может спровоцировать слишком агрессивный приход молока с отёком тканей и сильной болью, а в дальнейшем и <a href="/symptomy_lechenie" class="inline-link">застой молока</a> из-за избыточной выработки.</div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Частые вопросы</h2>
-    <div class="faq-item">
-      <div class="faq-q">Сколько раз в день нужно есть?</div>
-      <div class="faq-a">Желательно не меньше 5 раз в сутки, по возможности за 30 минут до кормления ребёнка.</div>
+  <section class="ask" id="faq">
+    <div class="chapter-head"><h2>Частые вопросы</h2></div>
+    <div class="ask-grid">
+      <div class="ask-card">
+        <div class="ask-q">Сколько раз в день нужно есть?</div>
+        <div class="ask-a">Желательно не меньше 5 раз в сутки, по возможности за 30 минут до кормления ребёнка.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Какие обезболивающие можно при лактации?</div>
+        <div class="ask-a">Самые безопасные — нурофен (ибупрофен) и парацетамол, не чаще 1 таблетки стандартной дозировки в 6 часов.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Можно ли лечить зубы при ГВ?</div>
+        <div class="ask-a">Да, можно и нужно. Местное обезболивание проникает в молоко в очень малом количестве. Покормите малыша перед лечением; через 3 часа после — сцедите всё молоко; через 2 часа после этого можно снова кормить грудью.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Нужно ли пить витамины во время кормления?</div>
+        <div class="ask-a">Потребность в витаминах A, D, C, E, B6, B12, фолиевой кислоте и минералах (железо, йод, кальций, цинк) растёт, но для профилактики поливитамины пить не стоит — избыток некоторых витаминов опаснее их недостатка. Лучше сдать анализ и принимать то, в чём есть реальная необходимость.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Как проверить совместимость конкретного лекарства с ГВ?</div>
+        <div class="ask-a">Бесплатный справочник совместимости лекарств, продуктов и процедур с беременностью и ГВ — <a href="https://mojno-li.ru" target="_blank" rel="noopener" class="inline-link">mojno-li.ru</a>.</div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">Какие обезболивающие можно при лактации?</div>
-      <div class="faq-a">Самые безопасные — нурофен (ибупрофен) и парацетамол, не чаще 1 таблетки стандартной дозировки в 6 часов.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Можно ли лечить зубы при ГВ?</div>
-      <div class="faq-a">Да, можно и нужно. Местное обезболивание проникает в молоко в очень малом количестве. Покормите малыша перед лечением; через 3 часа после — сцедите всё молоко; через 2 часа после этого можно снова кормить грудью.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Нужно ли пить витамины во время кормления?</div>
-      <div class="faq-a">Потребность в витаминах A, D, C, E, B6, B12, фолиевой кислоте и минералах (железо, йод, кальций, цинк) растёт, но для профилактики поливитамины пить не стоит — избыток некоторых витаминов опаснее их недостатка. Лучше сдать анализ и принимать то, в чём есть реальная необходимость.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Как проверить совместимость конкретного лекарства с ГВ?</div>
-      <div class="faq-a">Бесплатный справочник совместимости лекарств, продуктов и процедур с беременностью и ГВ — <a href="https://mojno-li.ru" target="_blank" rel="noopener" style="color:var(--terra);font-weight:700">mojno-li.ru</a>.</div>
-    </div>
-  </div>
+  </section>
 
-  <div class="cta-block">
+  <div class="nudge">
     <h3>Остались вопросы по питанию или лактации?</h3>
     <p>Специалист по ГВ ответит бесплатно по телефону — круглосуточно, без выходных.</p>
-    <a href="tel:+74957760396" class="btn-white">📞 +7 (495) 776-03-96</a>
+    <a href="tel:+74957760396" class="btn-paper">📞 +7 (495) 776-03-96</a>
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="ft-grid">
+<footer class="foot">
+  <div class="foot-grid">
     <div>
-      <div class="ft-logo">Радость материнства</div>
-      <p class="ft-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
+      <div class="foot-brand">Радость материнства</div>
+      <p class="foot-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
     </div>
-    <div class="ft-col">
+    <div class="foot-group">
       <h5>Контакты</h5>
       <div><a href="tel:+74957760396">+7 (495) 776-03-96</a></div>
       <div><a href="https://wa.me/79120130405">WhatsApp: +7 (912) 013-04-05</a></div>
       <div><a href="mailto:info@zastoy-moloka.ru">info@zastoy-moloka.ru</a></div>
       <div>Одинцово, ул. Дружбы, дом 2</div>
     </div>
-    <div class="ft-col">
+    <div class="foot-group">
       <h5>Статьи</h5>
       <div><a href="/symptomy_lechenie">Застой молока — симптомы и лечение</a></div>
     </div>
   </div>
-  <div class="ft-bottom">
+  <div class="foot-legal">
     Реквизиты и номер медицинской лицензии предоставим по запросу
   </div>
 </footer>

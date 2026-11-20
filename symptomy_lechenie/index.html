@@ -33,56 +33,73 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --a1:#D97757;--a2:#E2916F;--a3:#EDB49C;--a4:#F8DDD0;--a5:#FCEEE7;--a6:#FDF6F2;
-      --cta:#D9A033;--cta-d:#B8801A;--cta-l:#FBF1DF;
-      --white:#FFFFFF;--cream:#FFFBF7;--ink:#2B211C;--ink2:#4A362C;--muted:#8A7267;
-      --brd:#F0E4DC;--brd2:#E0CBBE;--r:22px;--rl:34px;--rsm:14px;
-      --terra:var(--a1);--terra-dark:var(--ink2);
-      --shadow:0 4px 20px rgba(217,119,87,0.10);
+      --clay:#D97757;--clay-light:#E2916F;--clay-pale:#EDB49C;--clay-mist:#F8DDD0;--clay-fog:#FCEEE7;--clay-haze:#FDF6F2;
+      --honey:#D9A033;--honey-deep:#B8801A;--honey-pale:#FBF1DF;
+      --paper-white:#FFFFFF;--paper:#FFFBF7;--char:#2B211C;--char-soft:#4A362C;--smoke:#8A7267;
+      --hairline:#F0E4DC;--hairline-deep:#E0CBBE;
+      --radius-sm:14px;--radius-md:22px;--radius-lg:34px;
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Mulish',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+    body{font-family:'Mulish',sans-serif;background:var(--paper);color:var(--char);line-height:1.75;font-size:16px}
     h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
     a{color:inherit}
-    .site-header{position:sticky;top:0;z-index:500;background:#A84A30;border-bottom:1px solid rgba(0,0,0,0.08)}
-    .hd-in{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;text-decoration:none}
-    .hd-cta{background:var(--cta);color:#fff;border:none;border-radius:var(--rsm);padding:10px 20px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none}
+    .inline-link{color:var(--clay);font-weight:700}
 
-    .article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 64px}
-    .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:18px}
-    .breadcrumb a{color:var(--terra);text-decoration:none}
+    .topline{position:sticky;top:0;z-index:500;background:#A84A30;border-bottom:1px solid rgba(0,0,0,0.08)}
+    .topline-row{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brandmark{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;text-decoration:none}
+    .topline-call{background:var(--honey);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px 20px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none}
+
+    .read-in{max-width:720px;margin:0 auto;padding:48px 24px 64px}
+    .trail{font-size:13px;color:var(--smoke);margin-bottom:18px}
+    .trail a{color:var(--clay);text-decoration:none}
     h1{font-size:clamp(26px,4vw,36px);line-height:1.25;margin-bottom:16px;text-wrap:balance}
-    .lead{font-size:17px;color:var(--muted);margin-bottom:32px}
-    .art-sec{margin-bottom:36px}
-    .art-sec h2{font-size:22px;color:var(--ink2);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--a4)}
-    .art-sec h3{font-size:17px;color:var(--terra);margin:18px 0 8px}
-    .art-sec p{margin-bottom:12px}
-    .art-sec ul,.art-sec ol{padding-left:22px;margin-bottom:12px}
-    .art-sec li{margin-bottom:8px}
-    .stage-card{background:var(--white);border:1.5px solid var(--brd);border-radius:var(--r);padding:20px 22px;margin-bottom:14px}
-    .stage-card h3{margin-top:0}
-    .box{background:var(--a6);border-left:4px solid var(--terra);border-radius:0 var(--r) var(--r) 0;padding:16px 20px;margin:16px 0;font-size:14.5px}
-    .box-danger{background:#FDECEA;border-left:4px solid #D9534F;border-radius:0 var(--r) var(--r) 0;padding:16px 20px;margin:16px 0;font-size:14.5px;font-weight:700;color:#8B2E2A}
-    .steps{counter-reset:step}
-    .step{position:relative;padding-left:40px;margin-bottom:16px}
-    .step::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--terra);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;font-family:'Mulish',sans-serif}
-    .faq-item{border-bottom:1px solid var(--brd);padding:16px 0}
-    .faq-q{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--ink2)}
-    .faq-a{font-size:14.5px;color:var(--muted)}
-    .cta-block{background:linear-gradient(135deg,var(--terra) 0%,var(--a2) 100%);border-radius:var(--rl);padding:32px;text-align:center;color:#fff;margin:40px 0}
-    .cta-block h3{color:#fff;margin-bottom:10px}
-    .btn-white{background:#fff;color:var(--ink2);border:none;border-radius:var(--rsm);padding:14px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}
-    .site-footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:48px 24px 24px}
-    .ft-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;text-align:left}
-    .ft-logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
-    .ft-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
-    .ft-col h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
-    .ft-col div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
-    .ft-col a{color:rgba(255,255,255,0.8);text-decoration:none}
-    .ft-bottom{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);text-align:center}
-    @media(max-width:900px){.ft-grid{grid-template-columns:1fr}}
-    .site-footer a{color:rgba(255,255,255,0.85)}
+    .dek{font-size:17px;color:var(--smoke);margin-bottom:32px}
+
+    .chapter{margin-bottom:38px}
+    .chapter-head{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--clay-mist);margin-bottom:16px}
+    .chapter-num{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--clay-pale);flex-shrink:0}
+    .chapter-head h2{font-size:22px;color:var(--char-soft);margin:0}
+    .chapter h3{font-size:17px;color:var(--clay);margin:18px 0 8px}
+    .chapter p{margin-bottom:12px}
+    .chapter ul,.chapter ol{padding-left:22px;margin-bottom:12px}
+    .chapter li{margin-bottom:8px}
+
+    .phase-list{display:flex;flex-direction:column;gap:14px;margin-bottom:14px}
+    .phase-card{background:var(--paper-white);border:1.5px solid var(--hairline);border-radius:var(--radius-md);padding:20px 22px}
+    .phase-card h3{margin-top:0}
+
+    .note{background:var(--clay-haze);border-radius:var(--radius-md);padding:18px 20px;margin:16px 0;font-size:14.5px;display:flex;gap:12px;align-items:flex-start}
+    .note::before{content:'💡';flex-shrink:0;font-size:16px}
+    .alert{background:#FDECEA;border-radius:var(--radius-md);padding:18px 20px;margin:16px 0;font-size:14.5px;font-weight:700;color:#8B2E2A;display:flex;gap:12px;align-items:flex-start}
+    .alert::before{content:'⚠️';flex-shrink:0;font-size:16px}
+
+    .sequence{counter-reset:seq}
+    .sequence-step{position:relative;padding-left:36px;margin-bottom:18px}
+    .sequence-step::before{counter-increment:seq;content:counter(seq);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:8px;background:var(--clay-mist);color:var(--char-soft);font-weight:800;font-size:12.5px;display:flex;align-items:center;justify-content:center;font-family:'Mulish',sans-serif}
+    .sequence-step:not(:last-child)::after{content:'';position:absolute;left:12px;top:26px;bottom:-18px;width:1.5px;background:var(--hairline-deep)}
+
+    .ask{margin-bottom:38px}
+    .ask-grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:680px){.ask-grid{grid-template-columns:1fr 1fr}}
+    .ask-card{background:var(--paper-white);border:1.5px solid var(--hairline);border-radius:var(--radius-md);padding:18px 20px}
+    .ask-q{font-weight:800;font-size:14.5px;margin-bottom:6px;color:var(--char-soft)}
+    .ask-a{font-size:13.5px;color:var(--smoke);line-height:1.6}
+
+    .nudge{background:linear-gradient(135deg,var(--clay) 0%,var(--clay-light) 100%);border-radius:var(--radius-lg);padding:32px;text-align:center;color:#fff;margin:40px 0}
+    .nudge h3{color:#fff;margin-bottom:10px}
+    .btn-paper{background:#fff;color:var(--char-soft);border:none;border-radius:var(--radius-sm);padding:14px 28px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}
+
+    .foot{background:var(--char);color:rgba(255,255,255,0.7);padding:48px 24px 24px}
+    .foot-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;text-align:left}
+    .foot-brand{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff}
+    .foot-about{font-size:13px;color:rgba(255,255,255,0.65);margin-top:10px;line-height:1.7;max-width:320px}
+    .foot-group h5{color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+    .foot-group div{font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:8px;line-height:1.6}
+    .foot-group a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{max-width:1280px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);text-align:center}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr}}
+    .foot a{color:rgba(255,255,255,0.85)}
   </style>
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -102,70 +119,72 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="hd-in">
-    <a href="/" class="logo">Радость материнства</a>
-    <a href="tel:+74957760396" class="hd-cta">📞 +7 (495) 776-03-96</a>
+<header class="topline">
+  <div class="topline-row">
+    <a href="/" class="brandmark">Радость материнства</a>
+    <a href="tel:+74957760396" class="topline-call">📞 +7 (495) 776-03-96</a>
   </div>
 </header>
 
-<div class="article-wrap">
-  <nav class="breadcrumb"><a href="/">Главная</a> → Застой молока — симптомы и лечение</nav>
+<div class="read-in">
+  <nav class="trail"><a href="/">Главная</a> → Застой молока — симптомы и лечение</nav>
   <h1>Застой молока — причины, симптомы и лечение</h1>
-  <p class="lead">Это болезненная задержка молока в молочной железе, в её долях и протоках. В первые часы ощущается как шарик или шишка — уплотнение, которое можно прощупать. Разбираем этапы развития застоя и необходимые действия на каждом из них.</p>
+  <p class="dek">Это болезненная задержка молока в молочной железе, в её долях и протоках. В первые часы ощущается как шарик или шишка — уплотнение, которое можно прощупать. Разбираем этапы развития застоя и необходимые действия на каждом из них.</p>
 
-  <div class="art-sec">
-    <h2>Этапы развития застоя</h2>
-    <div class="stage-card">
-      <h3>1. Начальный застой</h3>
-      <p>Выглядит как локальное уплотнение по форме шарика или по периметру всей дольки. Сопровождается болезненным чувством распирания и покалывания, но не всегда. Покраснения и температуры на этом этапе нет.</p>
-      <p>Нужно приложить ребёнка на максимально длительное время, параллельно делая лёгкий массаж груди. Если после прикладывания уплотнение всё ещё ощущается — попробуйте <a href="#marmet" style="color:var(--terra);font-weight:700">расцедить грудь вручную</a> или молокоотсосом (ручным или электрическим).</p>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">01</span><h2>Этапы развития застоя</h2></div>
+    <div class="phase-list">
+      <div class="phase-card">
+        <h3>1. Начальный застой</h3>
+        <p>Выглядит как локальное уплотнение по форме шарика или по периметру всей дольки. Сопровождается болезненным чувством распирания и покалывания, но не всегда. Покраснения и температуры на этом этапе нет.</p>
+        <p>Нужно приложить ребёнка на максимально длительное время, параллельно делая лёгкий массаж груди. Если после прикладывания уплотнение всё ещё ощущается — попробуйте <a href="#marmet" class="inline-link">расцедить грудь вручную</a> или молокоотсосом (ручным или электрическим).</p>
+      </div>
+      <div class="phase-card">
+        <h3>2. Отёк и воспаление</h3>
+        <p>Воспалительные процессы в груди развиваются быстро — через несколько часов появляется отёк, покраснение и локальное повышение температуры. Одного расцеживания уже недостаточно: нужно прикладывать ребёнка каждые 1,5 часа к больной груди, а после каждого кормления делать компрессы (как это делать — ниже).</p>
+        <p>Если ребёнок не готов кушать так часто — используйте молокоотсос или сцеживайтесь вручную. Компрессы обязательны: отёк мешает оттоку молока, и без них застой проходит намного дольше.</p>
+      </div>
     </div>
-    <div class="stage-card">
-      <h3>2. Отёк и воспаление</h3>
-      <p>Воспалительные процессы в груди развиваются быстро — через несколько часов появляется отёк, покраснение и локальное повышение температуры. Одного расцеживания уже недостаточно: нужно прикладывать ребёнка каждые 1,5 часа к больной груди, а после каждого кормления делать компрессы (как это делать — ниже).</p>
-      <p>Если ребёнок не готов кушать так часто — используйте молокоотсос или сцеживайтесь вручную. Компрессы обязательны: отёк мешает оттоку молока, и без них застой проходит намного дольше.</p>
-    </div>
-    <div class="box-danger">Если температура тела поднялась до 38° и выше, или застой не проходит дольше 2 дней — ждать нельзя. Это может означать переход в мастит, который в некоторых случаях решается только хирургически. Срочно обращайтесь к специалисту по грудному вскармливанию.</div>
-    <div class="box">Температура не является противопоказанием к грудному вскармливанию. Ребёнок не может «отравиться» молоком при воспалительном процессе, если ситуация под контролем грамотного специалиста. При отказе от кормления грудью ситуация, наоборот, может значительно ухудшиться.</div>
-  </div>
+    <div class="alert">Если температура тела поднялась до 38° и выше, или застой не проходит дольше 2 дней — ждать нельзя. Это может означать переход в мастит, который в некоторых случаях решается только хирургически. Срочно обращайтесь к специалисту по грудному вскармливанию.</div>
+    <div class="note">Температура не является противопоказанием к грудному вскармливанию. Ребёнок не может «отравиться» молоком при воспалительном процессе, если ситуация под контролем грамотного специалиста. При отказе от кормления грудью ситуация, наоборот, может значительно ухудшиться.</div>
+  </section>
 
-  <div class="art-sec" id="marmet">
-    <h2>Как расцедить грудь вручную — техника Marmet</h2>
+  <section class="chapter" id="marmet">
+    <div class="chapter-head"><span class="chapter-num">02</span><h2>Как расцедить грудь вручную — техника Marmet</h2></div>
     <p>Если ребёнок не хочет брать больную грудь или сосёт недостаточно активно — попробуйте сцедить молоко самостоятельно.</p>
-    <div class="steps">
-      <div class="step">Сначала сделайте лёгкий лимфодренажный массаж всей груди — поглаживаниями, вибрацией и лёгкой пальпацией, по направлению от центра грудной клетки через молочную железу к подмышке.</div>
-      <div class="step">Расположите пальцы на ареоле на расстоянии 2,5–3 см от соска: большой палец с одной стороны, указательный и средний — с другой, напротив большого. Пальцы не должны двигаться по ареоле к соску.</div>
-      <div class="step">Слегка надавите на грудь — ощущение не должно быть болезненным. При необходимости можно смягчить отёк молочной железы давлением.</div>
-      <div class="step">Аккуратно сожмите протоки под ареолой. Повторяйте ритмично до облегчения — грудь станет мягче и комфортнее, пройдёт ощущение распирания.</div>
+    <div class="sequence">
+      <div class="sequence-step">Сначала сделайте лёгкий лимфодренажный массаж всей груди — поглаживаниями, вибрацией и лёгкой пальпацией, по направлению от центра грудной клетки через молочную железу к подмышке.</div>
+      <div class="sequence-step">Расположите пальцы на ареоле на расстоянии 2,5–3 см от соска: большой палец с одной стороны, указательный и средний — с другой, напротив большого. Пальцы не должны двигаться по ареоле к соску.</div>
+      <div class="sequence-step">Слегка надавите на грудь — ощущение не должно быть болезненным. При необходимости можно смягчить отёк молочной железы давлением.</div>
+      <div class="sequence-step">Аккуратно сожмите протоки под ареолой. Повторяйте ритмично до облегчения — грудь станет мягче и комфортнее, пройдёт ощущение распирания.</div>
     </div>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Компрессы — зачем и как делать</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">03</span><h2>Компрессы — зачем и как делать</h2></div>
     <p>Компрессы необходимы после любого воздействия на грудь: кормления, ручного расцеживания, использования молокоотсоса — особенно если уже появился отёк. Без них избавиться от застоя намного сложнее: отёк мешает малышу рассасывать уплотнение и мешает расцеживанию вручную.</p>
-    <div class="steps">
-      <div class="step">Смочите пелёнку или полотенце прохладной водой, приложите к груди на 5–7 минут.</div>
-      <div class="step">Вылейте 1–2 ампулы раствора магния сульфата (магнезии) на марлевую салфетку или бинт. Приложите на область болезненности, не задевая сосок и ареолу. Оставьте на 1 час или до полного высыхания.</div>
-      <div class="step">Выдавите мазь Траумель С и толстым слоем промажьте всю болезненную область груди, не задевая сосок и ареолу. Оставьте до полного высыхания.</div>
-      <div class="step">Аккуратно протрите остатки влажной детской салфеткой.</div>
+    <div class="sequence">
+      <div class="sequence-step">Смочите пелёнку или полотенце прохладной водой, приложите к груди на 5–7 минут.</div>
+      <div class="sequence-step">Вылейте 1–2 ампулы раствора магния сульфата (магнезии) на марлевую салфетку или бинт. Приложите на область болезненности, не задевая сосок и ареолу. Оставьте на 1 час или до полного высыхания.</div>
+      <div class="sequence-step">Выдавите мазь Траумель С и толстым слоем промажьте всю болезненную область груди, не задевая сосок и ареолу. Оставьте до полного высыхания.</div>
+      <div class="sequence-step">Аккуратно протрите остатки влажной детской салфеткой.</div>
     </div>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Можно ли греть грудь при застое</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">04</span><h2>Можно ли греть грудь при застое</h2></div>
     <p>Частая ошибка — тёплые компрессы или горячий душ при первых признаках застоя в надежде «разогнать» уплотнение. На самом деле в первые часы тепло может навредить: оно расширяет сосуды и усиливает приток крови к уже воспалённому участку, из-за чего отёк только нарастает.</p>
     <p>Тёплая вода уместна лишь на 1–2 минуты непосредственно перед сцеживанием или кормлением — она помогает расслабить протоки и облегчает отток молока. А после кормления или сцеживания, когда нужно снять отёк и боль, работает холод — прохладный компресс, как описано выше. Разница именно в том, до или после воздействия на грудь прикладывается тепло или холод.</p>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Сколько времени проходит застой</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">05</span><h2>Сколько времени проходит застой</h2></div>
     <p>При правильных действиях — частом прикладывании, расцеживании и компрессах — лёгкий начальный застой обычно проходит за 24–48 часов. Многим мамам становится заметно легче уже после одного сеанса профессионального расцеживания: грудь становится мягче в течение нескольких часов.</p>
     <p>Если уплотнение глубокое или их несколько, может потребоваться 2–3 визита специалиста с интервалом в сутки. Главный ориентир — динамика: если день за днём состояние улучшается, а не ухудшается, лечение идёт правильно. Если улучшения нет дольше 2 дней или температура не снижается — не стоит затягивать с визитом специалиста.</p>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Причины застоя молока</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">06</span><h2>Причины застоя молока</h2></div>
     <ul>
       <li><strong>Неправильное прикладывание</strong> — малыш неэффективно высасывает молоко, из-за чего появляются регулярные застои.</li>
       <li><strong>Надавливание на грудь</strong> во время кормления или сцеживания — пережимает протоки.</li>
@@ -175,86 +194,88 @@
       <li><strong>Избыток молока</strong> — чаще всего на 3–5 день после родов, когда молозиво переходит в обычное молоко.</li>
       <li><strong>Стресс и переутомление</strong> — влияют на отток молока не меньше, чем механические причины.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Профилактика повторного застоя</h2>
+  <section class="chapter">
+    <div class="chapter-head"><span class="chapter-num">07</span><h2>Профилактика повторного застоя</h2></div>
     <ul>
       <li>Прикладывайте ребёнка по требованию — не реже раза в 2–3 часа днём и раза в 4 часа ночью.</li>
       <li>Следите за техникой прикладывания: рот широко открыт, нижняя губа вывернута, малыш захватывает не только сосок, но и часть ареолы.</li>
       <li>Меняйте позы кормления в течение дня, чтобы разные доли груди опорожнялись равномерно.</li>
       <li>Не носите тесное бельё и одежду, которая пережимает грудь, особенно во сне.</li>
       <li>Если временно разлучены с ребёнком — не допускайте долгих перерывов, сцеживайтесь по тому же графику, что и обычные кормления.</li>
-      <li>Следите за питьевым режимом в первые дни после родов: резкое увеличение количества жидкости может спровоцировать слишком агрессивный приход молока — подробнее мы писали в статье <a href="/pitanie_kormyashey_mamy" style="color:var(--terra);font-weight:700">о питании кормящей мамы</a>.</li>
+      <li>Следите за питьевым режимом в первые дни после родов: резкое увеличение количества жидкости может спровоцировать слишком агрессивный приход молока — подробнее мы писали в статье <a href="/pitanie_kormyashey_mamy" class="inline-link">о питании кормящей мамы</a>.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="art-sec">
-    <h2>Частые вопросы</h2>
-    <div class="faq-item">
-      <div class="faq-q">Можно ли греть грудь при застое молока?</div>
-      <div class="faq-a">В первые часы — нет, тепло может усилить отёк. Тёплый душ допустим на 1–2 минуты перед сцеживанием, а после кормления или сцеживания нужен холодный компресс.</div>
+  <section class="ask" id="faq">
+    <div class="chapter-head"><h2>Частые вопросы</h2></div>
+    <div class="ask-grid">
+      <div class="ask-card">
+        <div class="ask-q">Можно ли греть грудь при застое молока?</div>
+        <div class="ask-a">В первые часы — нет, тепло может усилить отёк. Тёплый душ допустим на 1–2 минуты перед сцеживанием, а после кормления или сцеживания нужен холодный компресс.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Можно ли принимать жаропонижающее при застое?</div>
+        <div class="ask-a">Да, нурофен (ибупрофен) или парацетамол безопасны при грудном вскармливании и не требуют прерывания кормления.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Нужно ли прекращать кормление при застое или высокой температуре?</div>
+        <div class="ask-a">Нет, наоборот — частое прикладывание к больной груди помогает быстрее справиться с застоем. Прервать кормление можно только по решению специалиста при особых медицинских показаниях.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Опасен ли застой молока для ребёнка?</div>
+        <div class="ask-a">Нет, ребёнок не может «отравиться» молоком при застое или даже при мастите, если ситуация под контролем специалиста по грудному вскармливанию.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Сколько раз в день можно делать компрессы с магнезией?</div>
+        <div class="ask-a">Обычно после каждого кормления или сцеживания — 6–8 раз в сутки, пока сохраняется уплотнение.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Чем застой молока отличается от мастита?</div>
+        <div class="ask-a">Застой — это механическая задержка молока без инфекции, обычно проходит без температуры выше 38° за 1–2 дня. Мастит — присоединение воспаления или инфекции, часто с высокой температурой и ухудшением состояния, требует более активного лечения.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Можно ли сильно разминать грудь, чтобы быстрее расцедить застой?</div>
+        <div class="ask-a">Нет, грубый и болезненный массаж травмирует ткани и может усилить отёк. Движения при расцеживании должны быть лёгкими, не вызывающими боль.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Как понять, что пора вызывать специалиста, а не справляться самой?</div>
+        <div class="ask-a">Если температура держится больше суток, уплотнение не уменьшается за 2 дня домашних мер, или состояние ухудшается — это повод вызвать специалиста на дом.</div>
+      </div>
+      <div class="ask-card">
+        <div class="ask-q">Можно ли пить меньше жидкости, чтобы снизить количество молока при застое?</div>
+        <div class="ask-a">Нет, ограничение питья не уменьшает количество молока эффективно, но может ухудшить самочувствие мамы. Справляться с застоем лучше через частое прикладывание и расцеживание.</div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">Можно ли принимать жаропонижающее при застое?</div>
-      <div class="faq-a">Да, нурофен (ибупрофен) или парацетамол безопасны при грудном вскармливании и не требуют прерывания кормления.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Нужно ли прекращать кормление при застое или высокой температуре?</div>
-      <div class="faq-a">Нет, наоборот — частое прикладывание к больной груди помогает быстрее справиться с застоем. Прервать кормление можно только по решению специалиста при особых медицинских показаниях.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Опасен ли застой молока для ребёнка?</div>
-      <div class="faq-a">Нет, ребёнок не может «отравиться» молоком при застое или даже при мастите, если ситуация под контролем специалиста по грудному вскармливанию.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Сколько раз в день можно делать компрессы с магнезией?</div>
-      <div class="faq-a">Обычно после каждого кормления или сцеживания — 6–8 раз в сутки, пока сохраняется уплотнение.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Чем застой молока отличается от мастита?</div>
-      <div class="faq-a">Застой — это механическая задержка молока без инфекции, обычно проходит без температуры выше 38° за 1–2 дня. Мастит — присоединение воспаления или инфекции, часто с высокой температурой и ухудшением состояния, требует более активного лечения.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Можно ли сильно разминать грудь, чтобы быстрее расцедить застой?</div>
-      <div class="faq-a">Нет, грубый и болезненный массаж травмирует ткани и может усилить отёк. Движения при расцеживании должны быть лёгкими, не вызывающими боль.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Как понять, что пора вызывать специалиста, а не справляться самой?</div>
-      <div class="faq-a">Если температура держится больше суток, уплотнение не уменьшается за 2 дня домашних мер, или состояние ухудшается — это повод вызвать специалиста на дом.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Можно ли пить меньше жидкости, чтобы снизить количество молока при застое?</div>
-      <div class="faq-a">Нет, ограничение питья не уменьшает количество молока эффективно, но может ухудшить самочувствие мамы. Справляться с застоем лучше через частое прикладывание и расцеживание.</div>
-    </div>
-  </div>
+  </section>
 
-  <div class="cta-block">
+  <div class="nudge">
     <h3>Не получается справиться самостоятельно?</h3>
     <p>Очень важно не рисковать и не экспериментировать. Если за 2 дня после первых симптомов лучше не становится — звоните, приедем и бережно расцедим на дому.</p>
-    <a href="tel:+74957760396" class="btn-white">📞 +7 (495) 776-03-96</a>
+    <a href="tel:+74957760396" class="btn-paper">📞 +7 (495) 776-03-96</a>
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="ft-grid">
+<footer class="foot">
+  <div class="foot-grid">
     <div>
-      <div class="ft-logo">Радость материнства</div>
-      <p class="ft-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
+      <div class="foot-brand">Радость материнства</div>
+      <p class="foot-about">Центр помощи кормящим мамам. Расцеживание застоя молока и мастита, обучение прикладыванию, увеличение лактации. Выезд на дом круглосуточно.</p>
     </div>
-    <div class="ft-col">
+    <div class="foot-group">
       <h5>Контакты</h5>
       <div><a href="tel:+74957760396">+7 (495) 776-03-96</a></div>
       <div><a href="https://wa.me/79120130405">WhatsApp: +7 (912) 013-04-05</a></div>
       <div><a href="mailto:info@zastoy-moloka.ru">info@zastoy-moloka.ru</a></div>
       <div>Одинцово, ул. Дружбы, дом 2</div>
     </div>
-    <div class="ft-col">
+    <div class="foot-group">
       <h5>Статьи</h5>
       <div><a href="/pitanie_kormyashey_mamy">Питание кормящей мамы</a></div>
     </div>
   </div>
-  <div class="ft-bottom">
+  <div class="foot-legal">
     Реквизиты и номер медицинской лицензии предоставим по запросу
   </div>
 </footer>
